@@ -11,19 +11,6 @@ int is_equal(float a, float b) {
     return 0;
 }
 
-int main()
-{
-    LinkedList ll = ll_create_empty();
-
-    ll_append(&ll, 3);
-    ll_append(&ll, 4);
-    ll_append(&ll, 5);
-
-    // ll_print(&ll);
-    ll_reverse(&ll);
-    ll_print(&ll);
-}
-
 LinkedList ll_create_empty()
 {
     LinkedList list;
@@ -268,6 +255,23 @@ void ll_reverse(LinkedList *ll) {
     }
     ll->tail = ll->head;
     ll->head = prev;
+}
+
+
+void ll_remove_duplicates(LinkedList *ll) {
+    Node *curr = ll->head;
+    Node *next = NULL;
+
+    while(curr->next != NULL) {
+        if (is_equal(curr->data, curr->next->data)) {
+            next = curr->next->next;
+            free(curr->next);
+            curr->next = next;
+            ll->size--;
+        } else {
+            curr = curr->next;
+        }
+    }
 }
 
 

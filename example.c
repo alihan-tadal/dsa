@@ -1,20 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "list/list.h"
+#include "linked_list/linked_list.h"
 
 int main()
 {
-    DynamicArray arr = create_array(7);
-    for (int i = 0; i < 6; i++)
+    // DynamicArray arr = create_array(7);
+    LinkedList linked_list = ll_create_empty();
+    for (int i = 0; i < 7; i++)
     {
-        push_back(&arr, i);
+        // arr.data[i] = i;
+        ll_append(&linked_list, i);
     }
-    print_array(&arr, arr.size);
-    describe_array(&arr);
-    insert(&arr, 3, 31); // see 0, 1, 2, 31, 3, 4, 5
-    print_array(&arr, arr.size);
-    describe_array(&arr);
-    remove_at(&arr, 3); // see 0, 1, 2, 3, 4, 5
-    print_array(&arr, arr.size);
-    return 0;
+    ll_print(&linked_list);
 }
