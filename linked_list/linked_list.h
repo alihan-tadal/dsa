@@ -23,17 +23,12 @@ ELEMENT_TYPE ll_remove_head(LinkedList *ll);
 ELEMENT_TYPE ll_remove_tail(LinkedList *ll);
 ELEMENT_TYPE ll_remove(LinkedList *ll, int index);
 void ll_remove_all(LinkedList *ll);
-int ll_size(LinkedList *ll);
 ELEMENT_TYPE ll_get(LinkedList *ll, int index);
 void ll_set(LinkedList *ll, int index, ELEMENT_TYPE data);
-int ll_index_of(LinkedList *ll, ELEMENT_TYPE data);
 int ll_contains(LinkedList *ll, ELEMENT_TYPE data);
 int ll_is_empty(LinkedList *ll);
 void ll_reverse(LinkedList *ll);
-void ll_sort(LinkedList *ll);
 void ll_remove_duplicates(LinkedList *ll);
-
-
 
 #endif // LINKED_LIST_H
 
