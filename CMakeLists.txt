@@ -9,4 +9,4 @@ add_subdirectory(stack)
 
 add_executable(data_structures example.c)
 
-target_link_libraries(data_structures PRIVATE list linked_list)
+target_link_libraries(data_structures PRIVATE list linked_list stack)

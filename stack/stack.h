@@ -1,19 +1,23 @@
 #ifndef STACK_H
 #define STACK_H
 
-#include "../linked_list/linked_list.h"
+typedef struct Node {
+    int data;
+    struct Node *next;
+} Node;
 
-typedef struct stack {
-    LinkedList *list;
+typedef struct Stack {
+    Node *top;
     int size;
 } Stack;
 
-Stack stack_create();
-void stack_push(Stack *stack, void *data);
-void stack_pop(Stack *stack);
-void stack_peek(Stack *stack);
-int stack_size(Stack *stack);
-void stack_print(Stack *stack, void (*print)(void *data));
-void stack_destroy(Stack *stack);
+// make declarations
+Stack createStack();
+void push(Stack *stack, int data);
+int pop(Stack *stack);
+int peek(Stack *stack);
+int isEmpty(Stack *stack);
+void deleteStack(Stack *stack);
 
-#endif // STACK_H
+
+#endif
