@@ -34,7 +34,6 @@ int pop(Stack *stack) {
 int peek(Stack *stack) {
     if (stack->size == 0) {
         printf("Stack is empty\n");
-        return;
     }
 
     printf("Top element: %d\n", stack->top->data);

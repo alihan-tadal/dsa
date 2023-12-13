@@ -2,15 +2,15 @@
 #include <stdlib.h>
 // #include "list/list.h"
 // #include "stack/stack.h"
-#include "queue/queue.h"
+// #include "queue/queue.h"
+#include "dequeue/dequeue.h"
 
 int main()
 {
-    Queue *q = create_queue();
-    enqueue(q, 1);
-    enqueue(q, 2);
-    enqueue(q, 3);
-    print_queue(q);
-    printf("Dequeue: %d\n", dequeue(q));
-    print_queue(q);
+    Dequeue *dq = create_dequeue();
+    push_front(dq, 1);
+    push_front(dq, 2);
+    push_front(dq, 3);
+    push_back(dq, 10);
+    print_dequeue(dq);
 }
